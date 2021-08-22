@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Error 404</title>
+</head>
+<style>
+
+.box {
+  width: 160px;
+  height: 120px;
+  float: left;
+  background: #00BDAA;
+  overflow: hidden;
+}
+
+.text {
+  text-align: center;
+  margin-top: 56px;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.animated {
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes hinge {
+  0% {transform: rotate(0);transform-origin: top left;animation-timing-function: ease-in-out;}
+  20%, 60% {transform: rotate(80deg);transform-origin: top left;animation-timing-function: ease-in-out;}
+  40% {transform: rotate(60deg);transform-origin: top left;animation-timing-function: ease-in-out;}
+  80% {transform: rotate(60deg) translateY(0);transform-origin: top left;animation-timing-function: ease-in-out;}
+  100% {transform: translateY(700px);}
+}
+.hinge {
+  margin: 20px;
+  animation-name: hinge;
+}
+
+
+@media all and (max-width: 680px) {
+  .wrap {
+   width: 100%;
+  }
+  .box {
+    width: 100%;
+    height: 55px;
+    clear: both;
+    margin: 0px auto;
+  }
+  .text {
+   margin-top: 20px; 
+  }
+  .hingebox, .flipbox {
+     display: none; 
+  }
+}
+</style>
+<body>
+    <header class="header">
+        <img class="header__img" src="img/videoclub.jpg" alt="">
+        <div class="header__menu">
+            <div class="header__menu--profile">
+                <img src="img/user-icon.png" alt="">
+                <p>Perfil</p>
+            </div>
+            <ul>
+                <li><a href="/">Cuenta</a></li>
+                <li><a href="/">Cerrar sesión</a></li>
+            </ul>
+        </div>
+    </header>
+  
+
+   <section class="pageError">
+        <div class="pageError__container">
+                <div class="box hingebox">
+                    <p class="text animated hinge">404</p>
+                </div>
+            <h2>Pagina no encontrada</h2>
+        </div>
+   </section>
+
+    <footer class="footer color_maq">
+        <a href="/">Terminos de uso</a>
+        <a href="/">Declaración de privacidad</a>
+        <a href="/">Centro de ayuda</a>
+    </footer>
+
+</body>
+</html>
